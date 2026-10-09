@@ -438,7 +438,16 @@ plastic_data_all %&gt;%
 <h3>Ex 2.</h3>
 <pre class="r"><code># Write your code here to answer exercise 2
 plastic_data_all &lt;- plastic_data_all %&gt;%
-  mutate(total_mismanage_plastic = mismanaged_plastic * population)</code></pre>
+  mutate(total_mismanage_plastic = mismanaged_plastic * population)
+
+region_summary &lt;- plastic_data_all %&gt;%
+  group_by(region) %&gt;%
+  summarise(
+    mean_total = mean(total_mismanage_plastic, na.rm = TRUE),
+    sum_total = sum(total_mismanage_plastic, na.rm = TRUE),
+    .groups = &quot;drop&quot;
+  ) %&gt;%
+  arrange(desc(sum_total))</code></pre>
 </div>
 <div id="ex-3." class="section level3">
 <h3>Ex 3.</h3>
