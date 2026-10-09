@@ -1,6 +1,6 @@
 ---
 title: "Lab 02 - Global plastic waste"
-author: "Team Name: Suhas, Nathan, Charlie, Justin, Rodger"
+author: "Team Name: Suhas, Nathan, Charlie, Justin, Roger"
 date: "`r Sys.Date()`"
 output: html_document
 ---
@@ -91,8 +91,8 @@ plastic_data_all %>%
 
 ```{r Ex2, message = FALSE}
 # Write your code here to answer exercise 2
-
-
+plastic_data_all <- plastic_data_all %>%
+  mutate(total_mismanage_plastic = mismanaged_plastic * population)
 
 ```
 
