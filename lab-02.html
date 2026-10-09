@@ -374,10 +374,11 @@ data2 &lt;- read_csv2(&quot;data/per-capita-ocean-plastic-waste.txt&quot;)
 
 
 # Member 1 (pair 1) write code to load File 3 data here:
+data3 &lt;- read_tsv(&quot;data/UN_country_population.tsv&quot;)
 
 
-
-# Member 3 (pair 2) write code to load File 4 data here:</code></pre>
+# Member 3 (pair 2) write code to load File 4 data here:
+data4 &lt;- read_excel(&quot;data/UN_country_region.xlsx&quot;)</code></pre>
 <pre class="r"><code># Member 2 (pair 1) write code to create object &#39;plastic_data_all&#39;:
 plastic_data_all &lt;- data1
 
@@ -390,13 +391,18 @@ plastic_data_all &lt;- data2 %&gt;%
 
 
 # Member 1 (pair 1) write code to join your data to &#39;plastic_data_all&#39;:
+plastic_data_all &lt;- data3 %&gt;%
+  select(-name) %&gt;%
+  right_join(plastic_data_all, by = &quot;code&quot;)
 
 
-
-
-# Member 3 (pair 2) write code to join your data to &#39;plastic_data_all&#39;:</code></pre>
+# Member 3 (pair 2) write code to join your data to &#39;plastic_data_all&#39;:
+plastic_data_all &lt;- data4 %&gt;%
+  select(-name) %&gt;%
+  right_join(plastic_data_all, by = &quot;code&quot;)</code></pre>
 <pre class="r"><code># Member 2 (pair 1) adds code here to view the first 10 rows of &#39;plastic_data_all&#39;
 plastic_data_all %&gt;% head(n=10)</code></pre>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <pre><code>## # A tibble: 10 × 3
 ##    name                code  mismanaged_plastic
@@ -426,6 +432,22 @@ plastic_data_all %&gt;% head(n=10)</code></pre>
 ##  9 BGD                    0.151   Bangladesh                       6.27 
 ## 10 BRB                    0.157   Barbados                         3.04</code></pre>
 >>>>>>> 8010b906f1e5fc9aaaab49283c7151b09baf6b52
+=======
+<pre><code>## # A tibble: 10 × 6
+##    code  region       population mismanaged_plastic_o…¹ name  mismanaged_plastic
+##    &lt;chr&gt; &lt;chr&gt;             &lt;dbl&gt;                  &lt;dbl&gt; &lt;chr&gt;              &lt;dbl&gt;
+##  1 AGO   Africa          31808.                 0.0270  Ango…              7.45 
+##  2 ALB   Europe           2876.                 0.543   Alba…             24.2  
+##  3 ARE   Asia             9176.                 0.00143 Unit…              0.526
+##  4 ARG   Latin Ameri…    44583.                 0.0924  Arge…             10.4  
+##  5 ATG   Latin Ameri…       91.9                0.0206  Anti…              6.46 
+##  6 AUS   Oceania         25170.                 0.00127 Aust…              0.209
+##  7 BEL   Europe          11480.                 0.00295 Belg…              0.198
+##  8 BEN   Africa          12114.                 0.139   Benin             11.3  
+##  9 BFA   Africa          20671.                 0       Burk…             15.6  
+## 10 BGD   Asia           164605.                 0.151   Bang…              6.27 
+## # ℹ abbreviated name: ¹​mismanaged_plastic_ocean</code></pre>
+>>>>>>> d3fc2e051ede63ac8e9169d32f845d1a8a31a709
 </div>
 <div id="exercises" class="section level2">
 <h2>Exercises</h2>
