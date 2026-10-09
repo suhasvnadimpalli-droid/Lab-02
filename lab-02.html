@@ -402,6 +402,37 @@ plastic_data_all &lt;- data4 %&gt;%
   right_join(plastic_data_all, by = &quot;code&quot;)</code></pre>
 <pre class="r"><code># Member 2 (pair 1) adds code here to view the first 10 rows of &#39;plastic_data_all&#39;
 plastic_data_all %&gt;% head(n=10)</code></pre>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<pre><code>## # A tibble: 10 × 3
+##    name                code  mismanaged_plastic
+##    &lt;chr&gt;               &lt;chr&gt;              &lt;dbl&gt;
+##  1 Albania             ALB               24.2  
+##  2 Algeria             DZA               17.8  
+##  3 Angola              AGO                7.45 
+##  4 Antigua and Barbuda ATG                6.46 
+##  5 Argentina           ARG               10.4  
+##  6 Australia           AUS                0.209
+##  7 Bahamas             BHS                5.69 
+##  8 Bahrain             BHR                0.636
+##  9 Bangladesh          BGD                6.27 
+## 10 Barbados            BRB                3.04</code></pre>
+=======
+<pre><code>## # A tibble: 10 × 4
+##    code  mismanaged_plastic_ocean name                mismanaged_plastic
+##    &lt;chr&gt;                    &lt;dbl&gt; &lt;chr&gt;                            &lt;dbl&gt;
+##  1 ALB                    0.543   Albania                         24.2  
+##  2 DZA                    0.134   Algeria                         17.8  
+##  3 AGO                    0.0270  Angola                           7.45 
+##  4 ATG                    0.0206  Antigua and Barbuda              6.46 
+##  5 ARG                    0.0924  Argentina                       10.4  
+##  6 AUS                    0.00127 Australia                        0.209
+##  7 BHS                    0.0514  Bahamas                          5.69 
+##  8 BHR                    0       Bahrain                          0.636
+##  9 BGD                    0.151   Bangladesh                       6.27 
+## 10 BRB                    0.157   Barbados                         3.04</code></pre>
+>>>>>>> 8010b906f1e5fc9aaaab49283c7151b09baf6b52
+=======
 <pre><code>## # A tibble: 10 × 6
 ##    code  region       population mismanaged_plastic_o…¹ name  mismanaged_plastic
 ##    &lt;chr&gt; &lt;chr&gt;             &lt;dbl&gt;                  &lt;dbl&gt; &lt;chr&gt;              &lt;dbl&gt;
@@ -416,6 +447,7 @@ plastic_data_all %&gt;% head(n=10)</code></pre>
 ##  9 BFA   Africa          20671.                 0       Burk…             15.6  
 ## 10 BGD   Asia           164605.                 0.151   Bang…              6.27 
 ## # ℹ abbreviated name: ¹​mismanaged_plastic_ocean</code></pre>
+>>>>>>> d3fc2e051ede63ac8e9169d32f845d1a8a31a709
 </div>
 <div id="exercises" class="section level2">
 <h2>Exercises</h2>
